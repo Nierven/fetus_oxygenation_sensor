@@ -1,0 +1,1 @@
+100µs entre red on et adc
