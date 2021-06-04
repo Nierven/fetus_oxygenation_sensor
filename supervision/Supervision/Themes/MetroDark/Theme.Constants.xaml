@@ -1,0 +1,56 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib"
+                    mc:Ignorable="d">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Theme.Colors.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    
+    <!-- FONTS -->
+    <system:Double x:Key="FontSizeNormal">14.667</system:Double>
+    <system:Double x:Key="FontSizeSmall">13.333</system:Double>
+    <system:Double x:Key="FontSizeBig">16.5</system:Double>
+
+    <FontFamily x:Key="FontFamilyNormal">Segoe UI</FontFamily>
+
+    <!-- PATHS -->
+    <Geometry x:Key="Checkmark">M 1145.607177734375,430 C1145.607177734375,430 1141.449951171875,435.0772705078125 1141.449951171875,435.0772705078125 1141.449951171875,435.0772705078125 1139.232177734375,433.0999755859375 1139.232177734375,433.0999755859375 1139.232177734375,433.0999755859375 1138,434.5538330078125 1138,434.5538330078125 1138,434.5538330078125 1141.482177734375,438 1141.482177734375,438 1141.482177734375,438 1141.96875,437.9375 1141.96875,437.9375 1141.96875,437.9375 1147,431.34619140625 1147,431.34619140625 1147,431.34619140625 1145.607177734375,430 1145.607177734375,430 z</Geometry>
+
+    <Geometry x:Key="BigArrowTop">M3.4,-4.4 L6.8,3.9 3.9566912E-07,3.9 z</Geometry>
+    <Geometry x:Key="BigArrowBottom">F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z</Geometry>
+    <Geometry x:Key="ArrowTop">F1 M 541.537,173.589L 531.107,173.589L 536.322,167.49L 541.537,173.589 Z</Geometry>
+    <Geometry x:Key="ArrowRight">M 0,0 L 4,3.5 L 0,7 Z</Geometry>
+
+    <Geometry x:Key="ValidationTriangleError">M 1,0 L6,0 A 2,2 90 0 1 8,2 L8,7 z</Geometry>
+    <Geometry x:Key="ValidationTriangleBorder">M 0,0 L2,0 L 8,6 L8,8</Geometry>
+
+    <!-- CORNERS -->
+    <system:Double x:Key="ProgressBar.CornerRadiusValue">3</system:Double>
+    <CornerRadius x:Key="ProgressBar.CornerRadius"
+                  BottomLeft="{StaticResource ProgressBar.CornerRadiusValue}"
+                  TopLeft="{StaticResource ProgressBar.CornerRadiusValue}"
+                  TopRight="{StaticResource ProgressBar.CornerRadiusValue}"
+                  BottomRight="{StaticResource ProgressBar.CornerRadiusValue}"/>
+
+    <!-- SIZES -->
+    <system:Double x:Key="ScrollBar.ArrowButton.Length">20</system:Double>
+    <GridLength x:Key="ScrollBar.ArrowButton.GridLength">20</GridLength>
+    <system:Double x:Key="ScrollBar.Thickness">15</system:Double>
+    <system:Double x:Key="ScrollBar.InnerThickness">15</system:Double>
+    <system:Double x:Key="MinVisualElementSize">30</system:Double>
+
+    <Thickness x:Key="TabControlBorderSize">2</Thickness>
+    <Thickness x:Key="TabControlBorderSizeLeft">2,2,0,2</Thickness>
+    <Thickness x:Key="TabControlBorderSizeTop">2,2,2,0</Thickness>
+    <Thickness x:Key="TabControlBorderSizeRight">0,2,2,2</Thickness>
+    <Thickness x:Key="TabControlBorderSizeBottom">2,0,2,2</Thickness>
+
+    <!-- OTHERS -->
+    <system:Double x:Key="ContentPresenter.Disabled.Opacity">0.55</system:Double>
+    <SolidColorBrush x:Key="ShadowBrush" Color="{StaticResource Black_60}"/>
+    <system:Double x:Key="ShadowOffset">2.5</system:Double>
+
+</ResourceDictionary>
