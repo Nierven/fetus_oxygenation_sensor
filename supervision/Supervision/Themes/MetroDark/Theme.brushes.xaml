@@ -1,0 +1,222 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                    mc:Ignorable="d">
+    
+    <!-- COLORS -->
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Theme.Colors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- Main Brushes -->
+    <SolidColorBrush x:Key="ForegroundBrush" Color="{StaticResource SemiWhite}" />
+    <SolidColorBrush x:Key="DarkForegroundBrush" Color="{StaticResource Gray_01}" />
+    <SolidColorBrush x:Key="LightForegroundBrush" Color="{StaticResource White}" />
+    <SolidColorBrush x:Key="TransparentBrush" Color="{StaticResource White_0}" />
+    <SolidColorBrush x:Key="VisualElement.Disabled" Color="{StaticResource Gray_07}" Opacity="0.6" />
+    <SolidColorBrush x:Key="Validation.ErrorElement" Color="{StaticResource ErrorColor}" />
+    <SolidColorBrush x:Key="Caret.Foreground" Color="{StaticResource Gray_Transparent_00}" />
+
+    <!-- Scrollbar/ScrollViewer Brushes -->
+    <SolidColorBrush x:Key="HScrollbarThumb.Static.Background" Color="{StaticResource Gray_03}" />
+    <SolidColorBrush x:Key="HScrollbarThumb.Hover.Background" Color="{StaticResource Gray_01}" />
+    <SolidColorBrush x:Key="HScrollbarThumb.Pressed.Background" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="HScrollbarThumb.Disabled.Background" Color="{StaticResource Gray_04}" />
+
+    <SolidColorBrush x:Key="VScrollbarThumb.Static.Background" Color="{StaticResource Gray_03}" />
+    <SolidColorBrush x:Key="VScrollbarThumb.Hover.Background" Color="{StaticResource Gray_01}" />
+    <SolidColorBrush x:Key="VScrollbarThumb.Pressed.Background" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="VScrollbarThumb.Disabled.Background" Color="{StaticResource Gray_04}" />
+
+    <SolidColorBrush x:Key="ScrollbarPageButtonArrow.Static.Background" Color="{StaticResource Gray_03}" />
+    <SolidColorBrush x:Key="ScrollbarPageButtonArrow.Pressed.Background" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="ScrollbarPageButtonArrow.Hover.Background" Color="{StaticResource Gray_01}" />
+    <SolidColorBrush x:Key="ScrollbarPageButtonArrow.Disabled.Background" Color="{StaticResource Gray_04}" />
+
+    <SolidColorBrush x:Key="Scrollbar.Static.Background" Color="{StaticResource Gray_07}" />
+    <SolidColorBrush x:Key="Scrollbar.Disabled.Background" Color="{StaticResource Gray_06}" />
+
+    <SolidColorBrush x:Key="ScrollViewer.Static.CornerBackground" Color="{StaticResource Gray_07}"/>
+
+    <!-- ComboBox Brushes -->
+    <SolidColorBrush x:Key="ComboBox.Static.Background" Color="{StaticResource Gray_07}" />
+    <SolidColorBrush x:Key="ComboBox.Static.Border" Color="{StaticResource Gray_04}" />
+    <SolidColorBrush x:Key="ComboBox.Hover.Background" Color="{StaticResource Gray_04}" />
+    <SolidColorBrush x:Key="ComboBox.ReadOnly.Background" Color="{StaticResource Gray_Transparent_01}" />
+    <SolidColorBrush x:Key="ComboBox.ReadOnly.Border" Color="{StaticResource Gray_04}" />
+    <SolidColorBrush x:Key="ComboBox.Hover.Border" Color="{StaticResource Gray_02}" />
+    <SolidColorBrush x:Key="ComboBox.Focused.Border" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="ComboBox.Disabled.Background" Color="{StaticResource Gray_07}" Opacity="0.6" />
+
+    <SolidColorBrush x:Key="Popup.Static.Background" Color="{StaticResource Gray_07}" />
+    <SolidColorBrush x:Key="Popup.Static.Border" Color="{StaticResource Gray_04}" />
+
+    <!-- TextBox Brushes -->
+    <SolidColorBrush x:Key="TextBox.Static.Background" Color="{StaticResource Gray_07}" />
+    <SolidColorBrush x:Key="TextBox.Static.Border" Color="{StaticResource Gray_04}" />
+    <SolidColorBrush x:Key="TextBox.Hover.Background" Color="{StaticResource Gray_06}" />
+    <SolidColorBrush x:Key="TextBox.Hover.Border" Color="{StaticResource Gray_02}" />
+    <SolidColorBrush x:Key="TextBox.Selection.Background" Color="{StaticResource AccentColor}" Opacity="0.4" />
+    <SolidColorBrush x:Key="TextBox.Selection.Foreground" Color="{StaticResource LightAccentColor}" />
+    <SolidColorBrush x:Key="TextBox.Focused.Selection" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="TextBox.ReadOnly.Background" Color="{StaticResource Gray_05}" />
+
+    <!-- Button Brushes -->
+    <SolidColorBrush x:Key="Button.Static.Background" Color="{StaticResource Gray_07}" />
+    <SolidColorBrush x:Key="Button.Static.Border" Color="{StaticResource Gray_04}" />
+    <SolidColorBrush x:Key="Button.Hover.Background" Color="{StaticResource Gray_04}" />
+    <SolidColorBrush x:Key="Button.Hover.Border" Color="{StaticResource Gray_01}" />
+    <SolidColorBrush x:Key="Button.Pressed.Background" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="Button.Pressed.Border" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="Button.Focused.Border" Color="{StaticResource DarkAccentColor}" />
+
+    <!-- ComboBoxItem Brushes -->
+    <SolidColorBrush x:Key="ComboBoxItem.Hover.Background" Color="{StaticResource Gray_04}" />
+    <SolidColorBrush x:Key="ComboBoxItem.Hover.Border" Color="{StaticResource Gray_02}" />
+    <SolidColorBrush x:Key="ComboBoxItem.Pressed.Background" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="ComboBoxItem.Pressed.Border" Color="{StaticResource AccentColor}" />
+
+    <!-- ComboBoxToggleButton Brushes -->
+    <SolidColorBrush x:Key="ComboBoxToggleButton.Static.Background" Color="{StaticResource Gray_07}" />
+    <SolidColorBrush x:Key="ComboBoxToggleButton.Static.Border" Color="{StaticResource Gray_04}" />
+    <SolidColorBrush x:Key="ComboBoxToggleButton.Hover.Background" Color="{StaticResource Gray_06}" />
+    <SolidColorBrush x:Key="ComboBoxToggleButton.Hover.Border" Color="{StaticResource Gray_02}" />
+    <SolidColorBrush x:Key="ComboBoxToggleButton.Pressed.Background" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="ComboBoxToggleButton.Pressed.Border" Color="{StaticResource AccentColor}" />
+
+    <SolidColorBrush x:Key="ComboBoxToggleButtonDropDownSeparator.Static.Background" Color="{StaticResource Gray_04}" />
+
+    <!-- ListBox Brushes -->
+    <SolidColorBrush x:Key="ListBox.Static.Background" Color="{StaticResource Gray_07}" />
+    <SolidColorBrush x:Key="ListBox.Static.Border" Color="{StaticResource Gray_04}" />
+
+    <SolidColorBrush x:Key="ListBoxItem.Static.Background" Color="{StaticResource White_0}" />
+    <SolidColorBrush x:Key="ListBoxItem.Static.Border" Color="{StaticResource White_0}" />
+    <SolidColorBrush x:Key="ListBoxItem.Hover.Background" Color="{StaticResource Gray_04}" />
+    <SolidColorBrush x:Key="ListBoxItem.Hover.Border" Color="{StaticResource Gray_02}" />
+    <SolidColorBrush x:Key="ListBoxItem.Pressed.Background" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="ListBoxItem.Pressed.Border" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="ListBoxItem.Selected.Background" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="ListBoxItem.Selected.Border" Color="{StaticResource AccentColor}" />
+
+    <!-- CheckBox Brushes -->
+    <SolidColorBrush x:Key="CheckBox.Static.Background" Color="{StaticResource Gray_07}" />
+    <SolidColorBrush x:Key="CheckBox.Static.Border" Color="{StaticResource Gray_04}" />
+    <SolidColorBrush x:Key="CheckBox.Hover.Background" Color="{StaticResource Gray_07}" />
+    <SolidColorBrush x:Key="CheckBox.Hover.Border" Color="{StaticResource Gray_02}" />
+    <SolidColorBrush x:Key="CheckBox.Pressed.Background" Color="{StaticResource Gray_07}" />
+    <SolidColorBrush x:Key="CheckBox.Pressed.Border" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="CheckBox.Focused.Background" Color="{StaticResource Gray_07}" />
+    <SolidColorBrush x:Key="CheckBox.Focused.Border" Color="{StaticResource DarkAccentColor}" />
+    <SolidColorBrush x:Key="CheckBox.Disabled.Background" Color="{StaticResource Gray_07}" />
+    <SolidColorBrush x:Key="CheckBox.Disabled.Border" Color="{StaticResource Gray_05}" />
+    <SolidColorBrush x:Key="CheckBox.InvalidUnfocused.Background" Color="{StaticResource Gray_07}" />
+    <SolidColorBrush x:Key="CheckBox.InvalidUnfocused.Border" Color="{StaticResource LightErrorColor}" />
+    <SolidColorBrush x:Key="CheckBox.InvalidFocused.Background" Color="{StaticResource Gray_07}" />
+    <SolidColorBrush x:Key="CheckBox.InvalidFocused.Border" Color="{StaticResource ErrorColor}" />
+
+    <SolidColorBrush x:Key="CheckBox.Check.Background" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="CheckBox.IndeterminateCheck.Background" Color="{StaticResource Gray_02}" />
+
+    <!-- RadioButton Brushes -->
+    <SolidColorBrush x:Key="RadioButton.Static.Background" Color="{StaticResource Gray_07}" />
+    <SolidColorBrush x:Key="RadioButton.Static.Border" Color="{StaticResource Gray_04}" />
+    <SolidColorBrush x:Key="RadioButton.Hover.Background" Color="{StaticResource Gray_07}" />
+    <SolidColorBrush x:Key="RadioButton.Hover.Border" Color="{StaticResource Gray_02}" />
+    <SolidColorBrush x:Key="RadioButton.Pressed.Background" Color="{StaticResource Gray_07}" />
+    <SolidColorBrush x:Key="RadioButton.Pressed.Border" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="RadioButton.Focused.Background" Color="{StaticResource Gray_07}" />
+    <SolidColorBrush x:Key="RadioButton.Focused.Border" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="RadioButton.InvalidUnfocused.Background" Color="{StaticResource Gray_07}" />
+    <SolidColorBrush x:Key="RadioButton.InvalidUnfocused.Border" Color="{StaticResource LightErrorColor}" />
+    <SolidColorBrush x:Key="RadioButton.InvalidFocused.Background" Color="{StaticResource Gray_07}" />
+    <SolidColorBrush x:Key="RadioButton.InvalidFocused.Border" Color="{StaticResource ErrorColor}" />
+
+    <SolidColorBrush x:Key="RadioButton.Check.Background" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="RadioButton.IndeterminateCheck.Background" Color="{StaticResource Gray_02}" />
+
+    <!-- Visual Glyphs brushes -->
+    <SolidColorBrush x:Key="Glyph.Static.Background" Color="{StaticResource Gray_01}" />
+    <SolidColorBrush x:Key="Glyph.Hover.Background" Color="{StaticResource Gray_00}" />
+    <SolidColorBrush x:Key="Glyph.Pressed.Background" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="Glyph.Disabled.Background" Color="{StaticResource Gray_03}" />
+
+    <!-- ValidationToolTip Brushes -->
+    <SolidColorBrush x:Key="ValidationToolTipTemplate.Static.Shadow" Color="{StaticResource Gray_01}" />
+
+    <!-- ToolTip Brushes -->
+    <SolidColorBrush x:Key="Tooltip.Static.Background" Color="{StaticResource Gray_07}" />
+    <SolidColorBrush x:Key="Tooltip.Static.Border" Color="{StaticResource Gray_04}" />
+
+    <!--  Slider Brushes -->
+    <SolidColorBrush x:Key="SliderThumb.Static.Background" Color="{StaticResource Gray_03}" />
+    <SolidColorBrush x:Key="SliderThumb.Hover.Background" Color="{StaticResource Gray_00}" />
+    <SolidColorBrush x:Key="SliderThumb.Pressed.Background" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="SliderThumb.Disabled.Background" Color="{StaticResource Gray_03}" />
+    <SolidColorBrush x:Key="SliderTrack.DisabledOverlay.Background" Color="{StaticResource Gray_06}" />
+    <SolidColorBrush x:Key="SliderThumb.Focused.Border" Color="{StaticResource AccentColor}" />
+
+    <SolidColorBrush x:Key="SliderTrack.Static.Background" Color="{StaticResource Gray_01}" />
+
+    <SolidColorBrush x:Key="SliderSelectionRange.Static.Background" Color="{StaticResource AccentColor}" />
+
+    <!--  GridSplitter Brushes -->
+    <SolidColorBrush x:Key="GridSplitter.Static.Background" Color="{StaticResource Gray_06}" />
+    <SolidColorBrush x:Key="GridSplitter.Static.Border" Color="{StaticResource Gray_02}" />
+    <SolidColorBrush x:Key="GridSplitter.Hover.Background" Color="{StaticResource Gray_04}" />
+    <SolidColorBrush x:Key="GridSplitter.Hover.Border" Color="{StaticResource Gray_01}" />
+    <SolidColorBrush x:Key="GridSplitter.Pressed.Background" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="GridSplitter.Focused.Border" Color="{StaticResource AccentColor}" />
+
+    <!-- ProgressBar Brushes -->
+    <SolidColorBrush x:Key="ProgressBar.Static.Background" Color="{StaticResource Gray_03}" />
+    <SolidColorBrush x:Key="ProgressBar.Static.Foreground" Color="{StaticResource AccentColor}" />
+    <LinearGradientBrush x:Key="ProgressBar.Indeterminate.Background" 
+                         EndPoint="0,1" MappingMode="Absolute" 
+                         SpreadMethod="Repeat" StartPoint="20,1" Opacity="0.8">
+
+        <LinearGradientBrush.Transform>
+            <TransformGroup>
+                <TranslateTransform X="0" />
+                <SkewTransform AngleX="-30" />
+            </TransformGroup>
+        </LinearGradientBrush.Transform>
+
+        <GradientStop Color="{StaticResource DarkAccentColor}" Offset="0.249" />
+        <GradientStop Color="{StaticResource AccentColor}" Offset=".25" />
+        <GradientStop Color="{StaticResource AccentColor}" Offset="0.75" />
+        <GradientStop Color="{StaticResource DarkAccentColor}" Offset="0.751" />
+    </LinearGradientBrush>
+
+    <!-- Expander Brushes -->
+    <SolidColorBrush x:Key="ExpanderButton.Static.Background" Color="{StaticResource Gray_07}" />
+    <SolidColorBrush x:Key="ExpanderButton.Static.Border" Color="{StaticResource Gray_02}" />
+    <SolidColorBrush x:Key="ExpanderButton.Hover.Background" Color="{StaticResource Gray_05}" />
+    <SolidColorBrush x:Key="ExpanderButton.Hover.Border" Color="{StaticResource Gray_01}" />
+    <SolidColorBrush x:Key="ExpanderButton.Pressed.Background" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="ExpanderButton.Pressed.Border" Color="{StaticResource AccentColor}" />
+
+    <SolidColorBrush x:Key="ExpanderArrow.Hover.Border" Color="{StaticResource Gray_00}" />
+    <SolidColorBrush x:Key="ExpanderArrow.Pressed.Border" Color="{StaticResource Gray_07}" />
+
+    <SolidColorBrush x:Key="Expander.Static.Background" Color="{StaticResource Gray_07}" />
+    <SolidColorBrush x:Key="Expander.Disabled.Background" Color="{StaticResource Gray_05}" />
+    <SolidColorBrush x:Key="Expander.Disabled.Foreground" Color="{StaticResource Gray_05}" />
+
+    <!-- GroupBox Brushes -->
+    <SolidColorBrush x:Key="GroupBox.Static.Border" Color="{StaticResource Gray_01}" />
+
+    <!-- TabControl Brushes -->
+    <SolidColorBrush x:Key="TabItem.Static.Background" Color="{StaticResource Gray_04}"/>
+    <SolidColorBrush x:Key="TabItem.Static.Border" Color="{StaticResource Gray_Transparent_01}"/>
+    <SolidColorBrush x:Key="TabItem.MouseOver.Background" Color="{StaticResource Gray_04}"/>
+    <SolidColorBrush x:Key="TabItem.MouseOver.Border" Color="{StaticResource AccentColor}"/>
+    <SolidColorBrush x:Key="TabItem.Disabled.Background" Color="{StaticResource Gray_06}"/>
+    <SolidColorBrush x:Key="TabItem.Disabled.Border" Color="{StaticResource Gray_06}"/>
+    <SolidColorBrush x:Key="TabItem.Selected.Background" Color="{StaticResource Black}" />
+    <SolidColorBrush x:Key="TabItem.Selected.Border" Color="{StaticResource Gray_04}" />
+
+    <!-- PassWordBox Brushes -->
+    <SolidColorBrush x:Key="PasswordBox.Focused.Foreground" Color="{StaticResource AccentColor}" />
+</ResourceDictionary>

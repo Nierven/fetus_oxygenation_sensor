@@ -1,0 +1,1210 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SciChart.Charting.DrawingTools</name>
+    </assembly>
+    <members>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation">
+            <summary>
+            Defines brush annotation, which may be placed on the chart.
+            </summary>
+        </member>
+        <member name="F:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation.StrokeProperty">
+            <summary>
+            Defines Stroke dependency property.
+            </summary>
+        </member>
+        <member name="F:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation.StrokeThicknessProperty">
+            <summary>
+            Defines StrokeThikness dependency property.
+            </summary>
+        </member>
+        <member name="F:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation.InitialBasePointsProperty">
+            <summary>
+            Defines InitialBasePoints dependency property.
+            </summary>
+        </member>
+        <member name="E:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation.AnnotationCreated">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation"/> class.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation.InitialBasePoints">
+            <summary>
+            Gets or Sets initial base points of type Observable collection of (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.Models.ComparablePoint"/>).
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation.StrokeThickness">
+            <summary>
+            Gets or sets the stroke thickness.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation.Stroke">
+            <summary>
+            Gets or sets the stroke brush.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation.IsCreated">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation.OnApplyTemplate">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation.GetBaseDataValues">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation.SetCashedBasePoints">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation.Update(SciChart.Charting.Numerics.CoordinateCalculators.ICoordinateCalculator{System.Double},SciChart.Charting.Numerics.CoordinateCalculators.ICoordinateCalculator{System.Double})">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation.OnAnnotationPointerPressed(SciChart.Core.Utility.Mouse.ModifierMouseArgs)">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation.GetBasePoints(SciChart.Charting.Visuals.Annotations.AnnotationCoordinates)">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation.GetSelectedCursor">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation.MoveAnnotationTo(SciChart.Charting.Visuals.Annotations.AnnotationCoordinates,System.Double,System.Double)">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation.MakeInvisible">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation.SetBasePoint(System.IComparable,System.IComparable)">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation.UpdateBasePoint(System.Int32,System.IComparable,System.IComparable)">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation.OnAttached">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation.OnDetached">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation.OnAnnotationCreated">
+            <summary>
+            Raises when <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation"/> creation is finished.
+            </summary>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.ExtendedLineAnnotation">
+            <summary>
+            Defines an extended line annotation, that is derived from  <see cref="T:SciChart.Charting.Visuals.Annotations.LineAnnotation"/> and which may be placed on the chart.
+            </summary>
+        </member>
+        <member name="F:SciChart.Charting.DrawingTools.TradingAnnotations.ExtendedLineAnnotation.IdProperty">
+            <summary>
+            Defines the Id dependency property
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ExtendedLineAnnotation.Id">
+            <summary>
+            Gets or Sets Id property
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ExtendedLineAnnotation.OnApplyTemplate">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ExtendedLineAnnotation.GetCoordinates">
+            <summary>
+            Gets annotation coordinates.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ExtendedLineAnnotation.SetActualCoordinates(SciChart.Charting.Visuals.Annotations.AnnotationCoordinates)">
+            <summary>
+            Sets actual annotation coordinates
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ExtendedLineAnnotation.MakeInvisible">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ExtendedLineAnnotation.PlaceAnnotation(SciChart.Charting.Visuals.Annotations.AnnotationCoordinates)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciExtensionAnnotation">
+            <summary>
+            Defines an (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciExtensionAnnotation"/>), which may be placed on the chart.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciExtensionAnnotation.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciExtensionAnnotation"/> class.
+            </summary>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciExtensionAnnotationBase">
+            <summary>
+            /// Provides a base class for (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciExtensionAnnotationBase"/>).
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciExtensionAnnotationBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciExtensionAnnotationBase"/> class.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciExtensionAnnotationBase.Update(SciChart.Charting.Numerics.CoordinateCalculators.ICoordinateCalculator{System.Double},SciChart.Charting.Numerics.CoordinateCalculators.ICoordinateCalculator{System.Double})">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciExtensionAnnotationBase.UpdateBasePoint(System.Int32,System.IComparable,System.IComparable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciExtensionAnnotationBase.SetBasePoint(System.IComparable,System.IComparable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciExtensionAnnotationBase.SetBasePoint(System.Windows.Point,System.Int32,SciChart.Charting.Visuals.Axes.IAxis,SciChart.Charting.Visuals.Axes.IAxis)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciExtensionAnnotationBase.SetBasePoint(System.IComparable,System.IComparable,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRatioLine">
+            <summary>
+            Interaction logic for FibonacciRatioLine.xaml
+            </summary>
+            <summary>
+            FibonacciRatioLine
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRatioLine.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRatioLine"/> class.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRatioLine.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRatioLineBase">
+            <summary>
+            Defines an (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRatioLine"/>), which may be placed on the chart.
+            </summary>
+        </member>
+        <member name="F:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRatioLineBase.LineLevelProperty">
+            <summary>
+            Defines LineLevel dependency property.
+            </summary>
+        </member>
+        <member name="F:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRatioLineBase.NextLineLevelProperty">
+            <summary>
+            Defines NextLineLevelProperty
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRatioLineBase.NextLineLevel">
+            <summary>
+            Gets or Sets NextLineLevel.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRatioLineBase.LineLevel">
+            <summary>
+            Gets or Sets LineLevel.
+            </summary>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRatioLineViewModel">
+            <summary>
+            Defines viewmodel for (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRatioLine"/>), which may be placed on the chart.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRatioLineViewModel.#ctor(System.Double,System.Windows.Media.Brush)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRatioLine"/> class, at (<paramref name="y1"/>) value level
+            and with (<paramref name="stroke"/>) brush.
+            </summary>
+            <param name="y1"></param>
+            <param name="stroke"></param>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRatioLineViewModel.LineLevel">
+            <summary>
+            Gets or Sets LineLevel value for (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRatioLine"/>).
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRatioLineViewModel.Stroke">
+            <summary>
+            Gets or Sets Stroke brush for (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRatioLine"/>).
+            </summary>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRetracementAnnotation">
+            <summary>
+            Defines an (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRetracementAnnotation"/>), which may be placed on the chart.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRetracementAnnotation.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRetracementAnnotation"/> class.
+            </summary>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRetracementAnnotationBase">
+            <summary>
+            Provides a base class for (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRetracementAnnotation"/>).
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRetracementAnnotationBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRetracementAnnotationBase"/> class.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRetracementAnnotationBase.Update(SciChart.Charting.Numerics.CoordinateCalculators.ICoordinateCalculator{System.Double},SciChart.Charting.Numerics.CoordinateCalculators.ICoordinateCalculator{System.Double})">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRetracementAnnotationBase.UpdateBasePoint(System.Int32,System.IComparable,System.IComparable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRetracementAnnotationBase.SetBasePoint(System.IComparable,System.IComparable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRetracementAnnotationBase.SetBasePoint(System.Windows.Point,System.Int32,SciChart.Charting.Visuals.Axes.IAxis,SciChart.Charting.Visuals.Axes.IAxis)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRetracementAnnotationBase.SetBasePoint(System.IComparable,System.IComparable,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciTableAnnotation">
+            <summary>
+            Interaction logic for FibonacciTableAnnotation.xaml
+            </summary>
+            <summary>
+            FibonacciTableAnnotation
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciTableAnnotation.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciTableAnnotation"/> class.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciTableAnnotation.Update(SciChart.Charting.Numerics.CoordinateCalculators.ICoordinateCalculator{System.Double},SciChart.Charting.Numerics.CoordinateCalculators.ICoordinateCalculator{System.Double})">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciTableAnnotation.GetBasePoints(SciChart.Charting.Visuals.Annotations.AnnotationCoordinates)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciTableAnnotation.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciTextLevel">
+            <summary>
+            Interaction logic for FibonacciTextLevel.xaml
+            </summary>
+            <summary>
+            FibonacciTextLevel
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciTextLevel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciTextLevel"/> class.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciTextLevel.OnApplyTemplate">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciTextLevel.FocusInputTextArea">
+            <summary>
+            Focuses the text input area on the <see cref="T:SciChart.Charting.Visuals.Annotations.TextAnnotation"/>
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciTextLevel.RemoveFocusInputTextArea">
+            <summary>
+            Remove focus from input text area. Applicable only for Text and label annotation
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciTextLevel.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.IFibonacciRetracementAnnotation">
+            <summary>
+            Defines the interface to an FibonacciRetracementAnnotation, that is a special type of drawingToolsAnnotation, a custom drawable element over or under the SciChartSurface.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.IFibonacciRetracementAnnotation.MovingLinesPartAnnotations">
+            <summary>
+            Returns collection of moving lines annotations.
+            </summary>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.HeadAndShouldersAnnotation">
+            <summary>
+            Defines an head and shoulders annotation, which may be placed on the chart.
+            </summary>
+        </member>
+        <member name="F:SciChart.Charting.DrawingTools.TradingAnnotations.HeadAndShouldersAnnotation.FillProperty">
+            <summary>
+            Defines Fill dependency property.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.HeadAndShouldersAnnotation.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.HeadAndShouldersAnnotation"/> class.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.HeadAndShouldersAnnotation.Fill">
+            <summary>
+            Gets or sets Fill brush.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.HeadAndShouldersAnnotation.Update(SciChart.Charting.Numerics.CoordinateCalculators.ICoordinateCalculator{System.Double},SciChart.Charting.Numerics.CoordinateCalculators.ICoordinateCalculator{System.Double})">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.HeadAndShouldersAnnotation.SetBasePoint(System.IComparable,System.IComparable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.HeadAndShouldersAnnotation.UpdateBasePoint(System.Int32,System.IComparable,System.IComparable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.HeadAndShouldersAnnotation.SetBasePoint(System.Windows.Point,System.Int32,SciChart.Charting.Visuals.Axes.IAxis,SciChart.Charting.Visuals.Axes.IAxis)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.HeadAndShouldersAnnotation.SetBasePoint(System.IComparable,System.IComparable,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.HeadAndShouldersAnnotation.UpdatePolygonById(System.String)">
+            <summary>
+            Update polygon coordinates by Id of the polygon
+            </summary>
+            <param name="id">Polygon id</param>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.HeadAndShouldersAnnotation.GetPolygonAnnotation(System.String)">
+            <summary>
+            Returns polygon annotation, that corresponds to (<paramref name="id"/>) parameter.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.HeadAndShouldersAnnotation.GetTextAnnotation(System.String)">
+            <summary>
+            Returns text annotation.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.HeadAndShouldersAnnotation.DetachAnnotation(SciChart.Charting.Visuals.Annotations.IAnnotation)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.HeadAndShouldersAnnotation.AttachAnnotation(SciChart.Charting.Visuals.Annotations.IAnnotation)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.Models.ComparablePoint">
+            <summary>
+            Represents an x- and y-DataValue pair in two-dimensional space.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.Models.ComparablePoint.X">
+            <summary>
+            Gets or sets X DataValue
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.Models.ComparablePoint.Y">
+            <summary>
+            Gets or sets Y DataValue
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.Models.ComparablePoint.#ctor(System.IComparable,System.IComparable)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.Models.ComparablePoint"/> class.
+            </summary>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.Models.IFibLevel">
+            <summary>
+            Defines the interface to an <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRatioLine"/>, that is used for storing line levels.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.Models.IFibLevel.LineLevel">
+            <summary>
+            Gets or sets LineLevel value.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.Models.IFibLevel.NextLineLevel">
+            <summary>
+            Gets or sets NextLineLevel value.
+            </summary>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.Models.RatioModel">
+            <summary>
+            Defines model for (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRatioLine"/>) that is used in (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRetracementAnnotation"/>) and in (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciExtensionAnnotation"/>). 
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.Models.RatioModel.#ctor(System.Double,System.Windows.Media.Brush)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.Models.RatioModel"/> class.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.Models.RatioModel.Value">
+            <summary>
+            Gets or sets the Value that is used for displaying Level of the  (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRatioLine"/>)
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.Models.RatioModel.Brush">
+            <summary>
+            Gets or sets brush that is used for coloring (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRatioLine"/>)
+            </summary>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.PitchforkAnnotation">
+            <summary>
+            Defines the pitchfork annotation, which may be placed on the chart.
+            </summary>
+        </member>
+        <member name="F:SciChart.Charting.DrawingTools.TradingAnnotations.PitchforkAnnotation.SidesFillProperty">
+            <summary>
+            Defines SidesFill dependency property.
+            </summary>
+        </member>
+        <member name="F:SciChart.Charting.DrawingTools.TradingAnnotations.PitchforkAnnotation.MiddleFillProperty">
+            <summary>
+            Defines MiddleFill dependency property.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.PitchforkAnnotation.MiddleFill">
+            <summary>
+            Gets or sets the brush that is used for filling side middle "fork" section.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.PitchforkAnnotation.SidesFill">
+            <summary>
+            Gets or sets the brush that is used for filling side "fork" sections.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.PitchforkAnnotation.SetBasePoint(System.IComparable,System.IComparable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.PitchforkAnnotation.Update(SciChart.Charting.Numerics.CoordinateCalculators.ICoordinateCalculator{System.Double},SciChart.Charting.Numerics.CoordinateCalculators.ICoordinateCalculator{System.Double})">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.PitchforkAnnotation.UpdateBasePoint(System.Int32,System.IComparable,System.IComparable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.PitchforkAnnotation.SetBasePoint(System.Windows.Point,System.Int32,SciChart.Charting.Visuals.Axes.IAxis,SciChart.Charting.Visuals.Axes.IAxis)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.PitchforkAnnotation.SetBasePoint(System.IComparable,System.IComparable,System.Int32)">
+            <summary>
+            Called internally to set base point with the (<paramref name="index"/>) param at (<paramref name="xDataValue"/>) and (<paramref name="yDataValue"/>) coordinates.
+            </summary>
+            <param name="xDataValue"></param>
+            <param name="yDataValue"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.PitchforkAnnotation.GetExtendedLineAnnotation(System.String)">
+            <summary>
+            Returns <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.ExtendedLineAnnotation"/> instance with corresponding (<paramref name="id"/>).
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.PitchforkAnnotation.GetPolygonAnnotation(System.String)">
+            <summary>
+            Returns <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.PolygonAnnotation"/> instance with corresponding (<paramref name="id"/>).
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.PitchforkAnnotation.DetachAnnotation(SciChart.Charting.Visuals.Annotations.IAnnotation)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.PitchforkAnnotation.AttachAnnotation(SciChart.Charting.Visuals.Annotations.IAnnotation)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.PolygonAnnotation.GetBaseDataValues">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.PolygonAnnotation.SetCashedBasePoints">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.PolygonAnnotation.Update(SciChart.Charting.Numerics.CoordinateCalculators.ICoordinateCalculator{System.Double},SciChart.Charting.Numerics.CoordinateCalculators.ICoordinateCalculator{System.Double})">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.PolygonAnnotation.OnApplyTemplate">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.PolygonAnnotation.GetBasePoints(SciChart.Charting.Visuals.Annotations.AnnotationCoordinates)">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.PolygonAnnotation.GetSelectedCursor">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.PolygonAnnotation.OnAnnotationPointerPressed(SciChart.Core.Utility.Mouse.ModifierMouseArgs)">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.PolygonAnnotation.OnAnnotationPointerReleased(SciChart.Core.Utility.Mouse.ModifierMouseArgs)">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.PolygonAnnotation.OnAnnotationPointerMoved(SciChart.Core.Utility.Mouse.ModifierMouseArgs)">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.PolygonAnnotation.MakeInvisible">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.PolygonAnnotation.SetBasePoint(System.Windows.Point,System.Int32,SciChart.Charting.Visuals.Axes.IAxis,SciChart.Charting.Visuals.Axes.IAxis)">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.PolygonAnnotation.MoveAnnotationTo(SciChart.Charting.Visuals.Annotations.AnnotationCoordinates,System.Double,System.Double)">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.PolygonAnnotation.SetBasePoint(System.IComparable,System.IComparable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.PolygonAnnotation.UpdateBasePoint(System.Int32,System.IComparable,System.IComparable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.PolygonAnnotation.UpdateBasePoint(System.Int32,System.Double,System.Double)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotation">
+            <summary>
+            Defines an (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotation"/>), which may be placed on the chart.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotation.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotation"/> class.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotation.SetBasePoint(System.IComparable,System.IComparable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotation.UpdateBasePoint(System.Int32,System.IComparable,System.IComparable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotation.SetBasePoint(System.IComparable,System.IComparable,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotation.Update(SciChart.Charting.Numerics.CoordinateCalculators.ICoordinateCalculator{System.Double},SciChart.Charting.Numerics.CoordinateCalculators.ICoordinateCalculator{System.Double})">
+            <inheritdoc/>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotationBase">
+            <summary>
+            Provides a base class for (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotation"/>) annotation to be rendered over the chart
+            </summary>
+        </member>
+        <member name="F:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotationBase.TextStyleProperty">
+            <summary>
+            Defines TextStyle dependency property.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotationBase.SetBasePoint(System.IComparable,System.IComparable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotationBase.Update(SciChart.Charting.Numerics.CoordinateCalculators.ICoordinateCalculator{System.Double},SciChart.Charting.Numerics.CoordinateCalculators.ICoordinateCalculator{System.Double})">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotationBase.UpdateBasePoint(System.Int32,System.IComparable,System.IComparable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotationBase.SetBasePoint(System.Windows.Point,System.Int32,SciChart.Charting.Visuals.Axes.IAxis,SciChart.Charting.Visuals.Axes.IAxis)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotationBase.SetBasePoint(System.IComparable,System.IComparable,System.Int32)">
+            <summary>
+            Called internally to set base point with the (<paramref name="index"/>) param at (<paramref name="xDataValue"/>) and (<paramref name="yDataValue"/>) coordinates.
+            </summary>
+            <param name="xDataValue"></param>
+            <param name="yDataValue"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotationBase.DetachAnnotation(SciChart.Charting.Visuals.Annotations.IAnnotation)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotationBase.AttachAnnotation(SciChart.Charting.Visuals.Annotations.IAnnotation)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.ITradingAnnotation">
+            <summary>
+            Defines the interface to an drawing tool, that is a special type of annotation, a custom drawable element over or under the SciChartSurface.
+            </summary>
+        </member>
+        <member name="E:SciChart.Charting.DrawingTools.TradingAnnotations.ITradingAnnotation.AnnotationCreated">
+            <summary>
+            Occurs when an annotation creation operation is finished and annotation created
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ITradingAnnotation.IsCreated">
+            <summary>
+            Gets whether the current annotation is created.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ITradingAnnotation.SetBasePoint(System.IComparable,System.IComparable)">
+            <summary>
+            Called to set the base point at the specified position at (<paramref name="x"/>) and (<paramref name="y"/>). Programmatically sets an adorner point position
+            NOTICE: method should be called after annotation was added to SciChartSurface.Annotations collection.
+            </summary>
+            <param name="x" ></param>
+            <param name="y"></param>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ITradingAnnotation.UpdateBasePoint(System.Int32,System.IComparable,System.IComparable)">
+            <summary>
+            Called to update the position of (<paramref name="index"/>) point to a new position at (<paramref name="x"/>) and (<paramref name="y"/>).
+            This method uses to update base points(and adorners also) that forces drawing tools annotation to re-draw.
+            </summary>
+            <param name="index"></param>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ITradingAnnotation.GetBaseDataValues">
+            <summary>
+            Gets the adorner data value positions
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ITradingAnnotation.SetCashedBasePoints">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase">
+            <summary>
+            Provides a base class for (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase"/>) to be rendered over the chart.
+            </summary>
+        </member>
+        <member name="F:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.IsMouseOverParentAnnotationProperty">
+            <summary>
+            Defines the IsMouseOverParentAnnotation attached property, that recognizes if mouse is over the parent composite annotation.
+            this is used to let parent annotation know that it's hovered by the mouse
+            </summary>
+        </member>
+        <member name="F:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.IsFilledAreaHitTestVisibleProperty">
+            <summary>
+            Defines the IsFilledAreaHitTestVisibleProperty attached property
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.SetIsMouseOverParentAnnotation(SciChart.Charting.Visuals.Annotations.AnnotationBase,System.Boolean)">
+            <summary>
+            Sets the IsMouseOverParentAnnotation attached property.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.GetIsMouseOverParentAnnotation(SciChart.Charting.Visuals.Annotations.AnnotationBase)">
+            <summary>
+            Gets the IsMouseOverParentAnnotation attached property.
+            </summary>
+        </member>
+        <member name="F:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.MovingPartProperty">
+            <summary>
+            Defines the MovingPart attached property, that uses internally to identify if current part is moving. 
+            </summary>
+        </member>
+        <member name="F:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.BasePointsCountProperty">
+            <summary>
+            Defines BasePointsCount dependency property
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.SetMovingPart(System.Windows.DependencyObject,System.Boolean)">
+            <summary>
+            Sets the MovingPart attached property.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.GetMovingPart(System.Windows.DependencyObject)">
+            <summary>
+            Gets the MovingPart attached property.
+            </summary>
+        </member>
+        <member name="F:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.StrokeThicknessProperty">
+            <summary>
+            Defines the StrokeThickness dependency property that specifies the StrokeThickness of the trading annotation.
+            </summary>
+        </member>
+        <member name="F:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.InitialBasePointsProperty">
+            <summary>
+            Defines InitialBasePoints dependency property.
+            </summary>
+        </member>
+        <member name="F:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.StrokeProperty">
+            <summary>
+            Defines Stroke dependency property that specifies the Stroke brush of the trading annotation.
+            </summary>
+        </member>
+        <member name="F:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.LineStyleProperty">
+            <summary>
+            Defines the LineStyle dependency property.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase"/> class.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.BasePointsCount">
+            <summary>
+            Gets or Sets base points count.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.InitialBasePoints">
+            <summary>
+            Gets or Sets initial base points of type Observable collection of (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.Models.ComparablePoint"/>).
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.IsFilledAreaHitTestVisible">
+            <summary>
+            Gets or sets a value that declares whether this element can possibly be returned as a hit test result.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.IsCreated">
+            <summary>
+            Gets whether the current annotation is created
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.Stroke">
+            <summary>
+            Gets or sets the Stroke property
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.LineStyle">
+            <summary>
+            Gets or sets the LineStyle property
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.StrokeThickness">
+            <summary>
+            Gets or sets the StrokeThickness property
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.MovingLinesPartAnnotations">
+            <summary>
+            Gets the MovingLinesPartAnnotations collection with child annotations that are moving.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.IsReadyToUpdateAfterUnload">
+            <summary>
+            Gets if annotation is ready to update after unload
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.SetBasePoint(System.IComparable,System.IComparable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.UpdateBasePoint(System.Int32,System.IComparable,System.IComparable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.Update(SciChart.Charting.Numerics.CoordinateCalculators.ICoordinateCalculator{System.Double},SciChart.Charting.Numerics.CoordinateCalculators.ICoordinateCalculator{System.Double})">
+            <summary>
+            Updates the coordinate calculators and refreshes the annotation position on the parent <see cref="T:SciChart.Charting.Visuals.SciChartSurface" />
+            </summary>
+            <param name="xCoordinateCalculator">The XAxis <see cref="T:SciChart.Charting.Numerics.CoordinateCalculators.ICoordinateCalculator`1" /></param>
+            <param name="yCoordinateCalculator">The YAxis <see cref="T:SciChart.Charting.Numerics.CoordinateCalculators.ICoordinateCalculator`1" /></param>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.OnLoaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Called when trading annotation is loaded.
+            </summary>
+            <param name="sender"></param>
+            <param name="routedEventArgs"></param>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.UpdatePolygonById(System.String)">
+            <summary>
+            Update polygon coordinates by Id of the polygon
+            </summary>
+            <param name="id">Polygon id</param>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.UpdateTextAnnotationBasePoint(SciChart.Charting.Visuals.Annotations.IAnnotation,System.Windows.Point,System.Windows.Point,System.Windows.Point)">
+            <summary>
+            Called to update position of the TextAnnotation
+            </summary>
+            <param name="textAnnotation"></param>
+            <param name="currentBasePoint"></param>
+            <param name="previousBasePoint"></param>
+            <param name="nextBasePoint"></param>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.SetOnTop(System.Boolean)">
+            <summary>
+            Changes Z-index of trading annotation.
+            </summary>
+            <param name="isMouseOver"></param>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.OnAnnotationPointerPressed(SciChart.Core.Utility.Mouse.ModifierMouseArgs)">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.MoveBasePointTo(System.Windows.Point,System.Int32,SciChart.Charting.Visuals.Axes.IAxis,SciChart.Charting.Visuals.Axes.IAxis)">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.MoveAnnotationTo(SciChart.Charting.Visuals.Annotations.AnnotationCoordinates,System.Double,System.Double)">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.GetBasePoints(SciChart.Charting.Visuals.Annotations.AnnotationCoordinates)">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.GetBaseDataValues">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.SetBasePoint(System.IComparable,System.IComparable,System.Int32)">
+            <summary>
+            Called internally to set base point with the (<paramref name="index"/>) param at (<paramref name="xDataValue"/>) and (<paramref name="yDataValue"/>) coordinates.
+            </summary>
+            <param name="xDataValue"></param>
+            <param name="yDataValue"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.SetCashedBasePoints">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.SetBasePoint(System.Windows.Point,System.Int32,SciChart.Charting.Visuals.Axes.IAxis,SciChart.Charting.Visuals.Axes.IAxis)">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.OnAnnotationCreated">
+            <summary>
+            Rises when trading annotation is created.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.OnAttached">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.OnDetached">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.WriteXml(System.Xml.XmlWriter)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase.ReadXml(System.Xml.XmlReader)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotationForMvvm">
+            <summary>
+            INTERNAL USE ONLY: Defines a class which extends the original <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation"/> and is created internally
+            per every <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.BrushAnnotationViewModel"/> of appropriate type in MVVM scenarios
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotationForMvvm.#ctor">
+            <summary>
+            INTERNAL USE ONLY: Initializes a new instance of the <seealso cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotationForMvvm"/> class.
+            </summary>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotationForMvvm">
+            <summary>
+            INTERNAL USE ONLY: Defines a class which extends the original <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotation"/> and is created internally
+            per every <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.ElliotWaveAnnotationViewModel"/> of appropriate type in MVVM scenarios
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotationForMvvm.#ctor">
+            <summary>
+            INTERNAL USE ONLY: Initializes a new instance of the <seealso cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotationForMvvm"/> class.
+            </summary>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.HeadAndShouldersAnnotationForMvvm">
+            <summary>
+            INTERNAL USE ONLY: Defines a class which extends the original <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.HeadAndShouldersAnnotation"/> and is created internally
+            per every <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.HeadAndShouldersAnnotationViewModel"/> of appropriate type in MVVM scenarios
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.HeadAndShouldersAnnotationForMvvm.#ctor">
+            <summary>
+            INTERNAL USE ONLY: Initializes a new instance of the <seealso cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.HeadAndShouldersAnnotationForMvvm"/> class.
+            </summary>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.PitchforkAnnotationForMvvm">
+            <summary>
+            INTERNAL USE ONLY: Defines a class which extends the original <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.PitchforkAnnotation"/> and is created internally
+            per every <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.PitchforkAnnotationViewModel"/> of appropriate type in MVVM scenarios
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.PitchforkAnnotationForMvvm.#ctor">
+            <summary>
+            INTERNAL USE ONLY: Initializes a new instance of the <seealso cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.PitchforkAnnotationForMvvm"/> class.
+            </summary>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.XabcdAnnotationForMvvm">
+            <summary>
+            INTERNAL USE ONLY: Defines a class which extends the original <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.XabcdAnnotation"/> and is created internally
+            per every <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.XabcdAnnotationViewModel"/> of appropriate type in MVVM scenarios
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.XabcdAnnotationForMvvm.#ctor">
+            <summary>
+            INTERNAL USE ONLY: Initializes a new instance of the <seealso cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.XabcdAnnotationForMvvm"/> class.
+            </summary>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciExtensionAnnotationForMvvm">
+            <summary>
+            INTERNAL USE ONLY: Defines a class which extends the original <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciExtensionAnnotation"/> and is created internally
+            per every <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.FibonacciExtensionAnnotationViewModel"/> of appropriate type in MVVM scenarios
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciExtensionAnnotationForMvvm.#ctor">
+            <summary>
+            INTERNAL USE ONLY: Initializes a new instance of the <seealso cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciExtensionAnnotationForMvvm"/> class.
+            </summary>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciRetracementAnnotationForMvvm">
+            <summary>
+            INTERNAL USE ONLY: Defines a class which extends the original <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciAnnotation.FibonacciRetracementAnnotation"/> and is created internally
+            per every <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.FibonacciRetracementAnnotationViewModel"/> of appropriate type in MVVM scenarios
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciRetracementAnnotationForMvvm.#ctor">
+            <summary>
+            INTERNAL USE ONLY: Initializes a new instance of the <seealso cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.FibonacciRetracementAnnotationForMvvm"/> class.
+            </summary>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.ITradingAnnotationViewModel">
+            <summary>
+            Defines the interface to an trading annotation ViewModel.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.ITradingAnnotationViewModel.Annotation">
+            <summary>
+            Gets or Sets an instance of (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase"/>).
+            </summary>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.TradingAnnotationViewModel">
+            <summary>
+            Provides a base class for trading annotation viewmodels.
+            </summary>
+        </member>
+        <member name="E:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.TradingAnnotationViewModel.AnnotationCreated">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.TradingAnnotationViewModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.TradingAnnotationViewModel"/> class.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.TradingAnnotationViewModel.SciChart#Charting#DrawingTools#TradingAnnotations#ViewModels#ITradingAnnotationViewModel#Annotation">
+            <inheritdoc/> 
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.TradingAnnotationViewModel.LineStyle">
+            <summary>
+            Gets or Sets the line style for (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase"/>).
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.TradingAnnotationViewModel.IsCreated">
+            <inheritdoc/> 
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.TradingAnnotationViewModel.Stroke">
+            <summary>
+            Gets or Sets the Stroke brush for (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase"/>).
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.TradingAnnotationViewModel.StrokeThickness">
+            <summary>
+             Gets or Sets the StrokeThickness value for (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.TradingAnnotationBase"/>).
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.TradingAnnotationViewModel.Annotations">
+            <summary>
+            Gets or Sets collection of annotations.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.TradingAnnotationViewModel.SetBasePoint(System.IComparable,System.IComparable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.TradingAnnotationViewModel.UpdateBasePoint(System.Int32,System.IComparable,System.IComparable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.TradingAnnotationViewModel.GetBaseDataValues">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.TradingAnnotationViewModel.SetCashedBasePoints">
+            <inheritdoc/>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.BrushAnnotationViewModel">
+            <summary>
+            Provides a class for BrushAnnotation viewmodel.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.BrushAnnotationViewModel.SciChart#Charting#DrawingTools#TradingAnnotations#ViewModels#ITradingAnnotationViewModel#Annotation">
+            <inheritdoc/>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.BrushAnnotationViewModel.IsCreated">
+            <inheritdoc/>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.BrushAnnotationViewModel.Stroke">
+            <summary>
+            Gets or Sets the Stroke brush for (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation"/>).
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.BrushAnnotationViewModel.StrokeThickness">
+            <summary>
+             Gets or Sets the StrokeThickness value for (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.BrushAnnotation"/>).
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.BrushAnnotationViewModel.SetBasePoint(System.IComparable,System.IComparable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.BrushAnnotationViewModel.UpdateBasePoint(System.Int32,System.IComparable,System.IComparable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.BrushAnnotationViewModel.GetBaseDataValues">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.BrushAnnotationViewModel.SetCashedBasePoints">
+            <inheritdoc/>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.BrushAnnotationViewModel.ViewType">
+            <inheritdoc/>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.ElliotWaveAnnotationBaseViewModel">
+            <summary>
+            Provides a class for EllioWaveAnnotationBase viewmodel.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.ElliotWaveAnnotationBaseViewModel.TextStyle">
+            <summary>
+            Gets or Sets text style for (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotation"/>).
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.ElliotWaveAnnotationBaseViewModel.FontFamily">
+            <summary>
+            Gets or Sets Font family for (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotation"/>).
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.ElliotWaveAnnotationBaseViewModel.FontWeight">
+            <summary>
+            Gets or Sets Font weight for (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotation"/>).
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.ElliotWaveAnnotationBaseViewModel.Foreground">
+            <summary>
+            Gets or Sets foreground for (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.ElliotWaveAnnotation"/>).
+            </summary>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.ElliotWaveAnnotationViewModel">
+            <summary>
+            Provides a class for EllioWaveAnnotation viewmodel.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.ElliotWaveAnnotationViewModel.ViewType">
+            <inheritdoc/>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.HeadAndShouldersAnnotationViewModel">
+            <summary>
+            Provides a class for EllioWaveAnnotation viewmodel.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.HeadAndShouldersAnnotationViewModel.Fill">
+            <summary>
+            Gets or Sets the Fill brush for (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.HeadAndShouldersAnnotation"/>).
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.HeadAndShouldersAnnotationViewModel.ViewType">
+            <inheritdoc/>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.PitchforkAnnotationViewModel">
+            <summary>
+            Provides a class for PitchforkAnnotation viewmodel.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.PitchforkAnnotationViewModel.MiddleFill">
+            <summary>
+             Gets or sets the brush that is used for filling the middle "fork" section.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.PitchforkAnnotationViewModel.SidesFill">
+            <summary>
+            Gets or sets the brush that is used for filling side "fork" sections.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.PitchforkAnnotationViewModel.ViewType">
+            <inheritdoc/>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.XabcdAnnotationViewModel">
+            <summary>
+            Provides a class for XabcdAnnotatio viewmodel.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.XabcdAnnotationViewModel.Fill">
+            <summary>
+            Gets or Sets the Fill brush for (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.XabcdAnnotation"/>).
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.XabcdAnnotationViewModel.ViewType">
+            <inheritdoc/>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.FibonacciExtensionAnnotationViewModel">
+            <summary>
+            Provides a class for FibonacciExtensionAnnotation viewmodel.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.FibonacciExtensionAnnotationViewModel.ViewType">
+            <inheritdoc/>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.FibonacciRetracementAnnotationViewModel">
+            <summary>
+            Provides a class for FibonacciRetracementAnnotation viewmodel.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.ViewModels.FibonacciRetracementAnnotationViewModel.ViewType">
+            <inheritdoc/>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingAnnotations.XabcdAnnotation">
+            <summary>
+            Defines an XABCD annotation, which may be placed on the chart.
+            </summary>
+        </member>
+        <member name="F:SciChart.Charting.DrawingTools.TradingAnnotations.XabcdAnnotation.FillProperty">
+            <summary>
+            Defines the Fill dependency property.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.XabcdAnnotation.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.XabcdAnnotation"/> class.
+            </summary>
+        </member>
+        <member name="P:SciChart.Charting.DrawingTools.TradingAnnotations.XabcdAnnotation.Fill">
+            <summary>
+            Gets or sets the Fill brush that is used for filling inner (<see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.PolygonAnnotation"/>).
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.XabcdAnnotation.GetPolygonAnnotation(System.String)">
+            <summary>
+            Returns an <see cref="T:SciChart.Charting.DrawingTools.TradingAnnotations.PolygonAnnotation"/> with corresponding (<paramref name="id"/>).
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.XabcdAnnotation.SetBasePoint(System.IComparable,System.IComparable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.XabcdAnnotation.UpdateBasePoint(System.Int32,System.IComparable,System.IComparable)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.XabcdAnnotation.SetBasePoint(System.IComparable,System.IComparable,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.XabcdAnnotation.Update(SciChart.Charting.Numerics.CoordinateCalculators.ICoordinateCalculator{System.Double},SciChart.Charting.Numerics.CoordinateCalculators.ICoordinateCalculator{System.Double})">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.XabcdAnnotation.UpdatePolygonById(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.XabcdAnnotation.DetachAnnotation(SciChart.Charting.Visuals.Annotations.IAnnotation)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingAnnotations.XabcdAnnotation.AttachAnnotation(SciChart.Charting.Visuals.Annotations.IAnnotation)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingModifiers.TradingAnnotationCreationModifier">
+            <summary>
+            A custom <see cref="T:SciChart.Charting.ChartModifiers.ChartModifierBase"/> to be used in conjunction with the <see cref="T:SciChart.Charting.Visuals.Annotations.AnnotationCollection"/>. The <see cref="T:SciChart.Charting.DrawingTools.TradingModifiers.TradingAnnotationCreationModifier"/> 
+            allows creation of drawing tools annotations on mouse-click and drag. See the example of use [ Trade Annotations ] in the examples-suite.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingModifiers.TradingAnnotationCreationModifier.OnIsEnabledChanged">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingModifiers.TradingAnnotationCreationModifier.OnModifierMouseMove(SciChart.Core.Utility.Mouse.ModifierMouseArgs)">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingModifiers.TradingAnnotationCreationModifier.OnModifierMouseDown(SciChart.Core.Utility.Mouse.ModifierMouseArgs)">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingModifiers.TradingAnnotationCreationModifier.OnModifierMouseUp(SciChart.Core.Utility.Mouse.ModifierMouseArgs)">
+            <inheritdoc/> 
+        </member>
+        <member name="T:SciChart.Charting.DrawingTools.TradingModifiers.TradingAnnotationCreationModifierMvvm">
+            <summary>
+            A custom <see cref="T:SciChart.Charting.ChartModifiers.ChartModifierBase"/> to be used in conjunction with the <see cref="T:SciChart.Charting.Visuals.Annotations.AnnotationCollection"/>. The <see cref="T:SciChart.Charting.DrawingTools.TradingModifiers.TradingAnnotationCreationModifier"/> 
+            allows creation of drawing tools annotations on mouse-click and drag. See the example of use [ Trade Annotations ] in the examples-suite.
+            </summary>
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingModifiers.TradingAnnotationCreationModifierMvvm.OnIsEnabledChanged">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingModifiers.TradingAnnotationCreationModifierMvvm.OnModifierMouseMove(SciChart.Core.Utility.Mouse.ModifierMouseArgs)">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingModifiers.TradingAnnotationCreationModifierMvvm.OnModifierMouseDown(SciChart.Core.Utility.Mouse.ModifierMouseArgs)">
+            <inheritdoc/> 
+        </member>
+        <member name="M:SciChart.Charting.DrawingTools.TradingModifiers.TradingAnnotationCreationModifierMvvm.OnModifierMouseUp(SciChart.Core.Utility.Mouse.ModifierMouseArgs)">
+            <inheritdoc/> 
+        </member>
+    </members>
+</doc>
