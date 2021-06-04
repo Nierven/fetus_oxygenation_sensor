@@ -54,3 +54,4 @@ C:\Github\fetus_oxygenation_sensor\supervision\Supervision\obj\Debug\Supervision
 C:\Github\fetus_oxygenation_sensor\supervision\Supervision\obj\Debug\Supervision.pdb
 C:\Github\fetus_oxygenation_sensor\supervision\Supervision\bin\Debug\Communications.dll
 C:\Github\fetus_oxygenation_sensor\supervision\Supervision\bin\Debug\Communications.pdb
+C:\Github\fetus_oxygenation_sensor\supervision\Supervision\obj\Debug\Supervision.csprojAssemblyReference.cache

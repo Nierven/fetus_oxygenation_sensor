@@ -42,3 +42,4 @@ C:\Github\fetus_oxygenation_sensor\supervision\Controls\obj\Debug\Controls.cspro
 C:\Github\fetus_oxygenation_sensor\supervision\Controls\obj\Debug\Controls.csproj.CopyComplete
 C:\Github\fetus_oxygenation_sensor\supervision\Controls\obj\Debug\Controls.dll
 C:\Github\fetus_oxygenation_sensor\supervision\Controls\obj\Debug\Controls.pdb
+C:\Github\fetus_oxygenation_sensor\supervision\Controls\obj\Debug\Controls.csprojAssemblyReference.cache

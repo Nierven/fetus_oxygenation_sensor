@@ -1,6 +1,6 @@
 C:\Github\fetus_oxygenation_sensor\supervision\Communications\bin\Debug\Communications.dll
 C:\Github\fetus_oxygenation_sensor\supervision\Communications\bin\Debug\Communications.pdb
-C:\Github\fetus_oxygenation_sensor\supervision\Communications\obj\Debug\Communications.csproj.AssemblyReference.cache
 C:\Github\fetus_oxygenation_sensor\supervision\Communications\obj\Debug\Communications.csproj.CoreCompileInputs.cache
 C:\Github\fetus_oxygenation_sensor\supervision\Communications\obj\Debug\Communications.dll
 C:\Github\fetus_oxygenation_sensor\supervision\Communications\obj\Debug\Communications.pdb
+C:\Github\fetus_oxygenation_sensor\supervision\Communications\obj\Debug\Communications.csprojAssemblyReference.cache
