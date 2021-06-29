@@ -9,7 +9,7 @@ int main(void)
     initADC();
     initUART();
 
-    FIRInit();
+    FiltersInit();
 
     // Wait a bit before starting
     T32_SetDelay(1000);

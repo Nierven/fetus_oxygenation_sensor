@@ -17,7 +17,7 @@ typedef enum MachineState_t
 static MachineState state = Init;
 void stateMachineLoop(void)
 {
-    static int16_t red_dc, red_ac, ir_dc, ir_ac;
+    static int16_t red, ir;
     switch (state)
     {
         case Stopped:
@@ -34,7 +34,7 @@ void stateMachineLoop(void)
         }
         case Red_ON:
         {
-            writeGPIO(Board, !readGPIO(Board));
+//            writeGPIO(Board, !readGPIO(Board));
             // Turn ON the Red LED
             writeGPIO(Red, 1);
 
@@ -48,8 +48,8 @@ void stateMachineLoop(void)
             ADC14->CTL0 |= ADC14_CTL0_ENC | ADC14_CTL0_SC; // Start sampling/conversion
             while (!(ADC14->CTL0 & ADC14_CTL0_BUSY));      // Wait until the conversion is done
 
-            red_ac = ADC14->MEM[0];
-            red_dc = ADC14->MEM[1];
+//            red_ac = ADC14->MEM[0];
+            red = ADC14->MEM[1];
 
             T32_SetDelay(RED_ON_TIME - ADC_DELAY);
             state = Red_OFF;
@@ -79,8 +79,8 @@ void stateMachineLoop(void)
             ADC14->CTL0 |= ADC14_CTL0_ENC | ADC14_CTL0_SC; // Start sampling/conversion
             while (!(ADC14->CTL0 & ADC14_CTL0_BUSY));      // Wait until the conversion is done
 
-            ir_ac = ADC14->MEM[0];
-            ir_dc = ADC14->MEM[1];
+//            ir_ac = ADC14->MEM[0];
+            ir = ADC14->MEM[1];
 
             T32_SetDelay(IR_ON_TIME - ADC_DELAY);
             state = IR_OFF;
@@ -98,7 +98,7 @@ void stateMachineLoop(void)
         case Process:
         {
             // Process the data
-            processData(red_dc, red_ac, ir_dc, ir_ac);
+            processData(red, ir);
 
             T32_SetDelay(PROCESS_TIME);
             state = Red_ON;

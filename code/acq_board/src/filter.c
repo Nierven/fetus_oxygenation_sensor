@@ -2,49 +2,69 @@
 #include "string.h"
 
 #define FILTER_LENGTH 312
+#define AVERAGE_LENGTH 1
 
 static int16_t x_red[FILTER_LENGTH + 1];
 static int16_t x_ir[FILTER_LENGTH + 1];
 static int16_t h[FILTER_LENGTH] = { 31,31,29,24,16,6,-7,-22,-39,-58,-78,-98,-119,-139,-159,-177,-193,-206,-216,-223,-227,-226,-222,-215,-204,-189,-172,-153,-132,-110,-88,-67,-47,-29,-14,-2,5,8,6,-2,-14,-32,-55,-82,-113,-147,-184,-222,-261,-299,-335,-369,-399,-425,-445,-459,-467,-467,-460,-446,-426,-399,-367,-330,-290,-247,-204,-161,-120,-82,-49,-22,-3,9,12,5,-12,-39,-74,-119,-171,-231,-295,-363,-433,-503,-570,-634,-691,-741,-781,-810,-826,-830,-819,-795,-757,-707,-644,-571,-490,-402,-311,-218,-127,-41,38,107,163,203,226,230,214,176,118,39,-59,-175,-307,-450,-603,-761,-920,-1075,-1223,-1357,-1473,-1567,-1635,-1671,-1674,-1640,-1567,-1453,-1297,-1101,-865,-591,-282,59,426,816,1222,1638,2058,2474,2880,3269,3635,3970,4269,4528,4740,4903,5013,5068,5068,5013,4903,4740,4528,4269,3970,3635,3269,2880,2474,2058,1638,1222,816,426,59,-282,-591,-865,-1101,-1297,-1453,-1567,-1640,-1674,-1671,-1635,-1567,-1473,-1357,-1223,-1075,-920,-761,-603,-450,-307,-175,-59,39,118,176,214,230,226,203,163,107,38,-41,-127,-218,-311,-402,-490,-571,-644,-707,-757,-795,-819,-830,-826,-810,-781,-741,-691,-634,-570,-503,-433,-363,-295,-231,-171,-119,-74,-39,-12,5,12,9,-3,-22,-49,-82,-120,-161,-204,-247,-290,-330,-367,-399,-426,-446,-460,-467,-467,-459,-445,-425,-399,-369,-335,-299,-261,-222,-184,-147,-113,-82,-55,-32,-14,-2,6,8,5,-2,-14,-29,-47,-67,-88,-110,-132,-153,-172,-189,-204,-215,-222,-226,-227,-223,-216,-206,-193,-177,-159,-139,-119,-98,-78,-58,-39,-22,-7,6,16,24,29,31,31 };
 
-
-void FIRInit(void)
+void FiltersInit(void)
 {
     memset(x_red, 0, FILTER_LENGTH);
     memset(x_ir, 0, FILTER_LENGTH);
-
-//    memset(h, 0, FILTER_LENGTH);
-//    h[0] = 1;
 }
 
-int16_t FIRRedOutput(int16_t x)
+void updateValues(int16_t red, int16_t ir)
+{
+    // Delay line for IR values
+    memcpy(x_red + 1, x_red, FILTER_LENGTH);
+    x_red[0] = red;
+
+    // Delay line for IR values
+    memcpy(x_ir + 1, x_ir, FILTER_LENGTH);
+    x_ir[0] = ir;
+}
+
+int16_t FIROutput(int16_t *values)
 {
     volatile int i;
 
-    // Delay line
-    memcpy(x_red + 1, x_red, FILTER_LENGTH);
-    x_red[0] = x;
-
     int32_t y = 0;
     for (i = 0; i < FILTER_LENGTH; i++)
-        y += x_red[i] * h[i];
+        y += values[i] * h[i];
 
     y /= 10000;
-
     return y;
 }
 
-int16_t FIRIROutput(int16_t x)
+int16_t FIRRedOutput(void)
+{
+    return FIROutput(x_red);
+}
+
+int16_t FIRIROutput(void)
+{
+    return FIROutput(x_ir);
+}
+
+int16_t movingAvg(int16_t *values)
 {
     volatile int i;
 
-    // Delay line
-    memcpy(x_ir + 1, x_ir, FILTER_LENGTH);
-    x_ir[0] = x;
-
     int32_t y = 0;
-    for (i = 0; i < FILTER_LENGTH; i++)
-        y += x_ir[i] * h[i];
+    for (i = 0; i < AVERAGE_LENGTH; i++)
+        y += values[i];
 
+    y /= AVERAGE_LENGTH;
     return y;
+}
+
+int16_t movingRedAvg(void)
+{
+    return movingAvg(x_red);
+}
+
+int16_t movingIRAvg(void)
+{
+    return movingAvg(x_ir);
 }

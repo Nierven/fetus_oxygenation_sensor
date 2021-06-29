@@ -11,65 +11,79 @@ static int16_t computeHeartRate(void);
 static int16_t red_min, red_max, red_min_2, red_max_2;
 static int16_t ir_min, ir_max, ir_min_2, ir_max_2;
 
-void processData(int16_t red_dc, int16_t red_ac, int16_t ir_dc, int16_t ir_ac)
+void processData(int16_t red, int16_t ir)
 {
+    static unsigned int sentCnt = 0;
     volatile unsigned int i;
 
-    // 1. Use FIR filter to improve data
-    int16_t red_ac_filtered = FIRRedOutput(red_ac);
-    int16_t ir_ac_filtered = FIRRedOutput(ir_ac);
+    // 1.1. Update data on history
+    updateValues(red, ir);
+
+    // 1.2. Use FIR filter to get AC values
+    int16_t red_ac_filtered = FIRRedOutput();
+    int16_t ir_ac_filtered = FIRIROutput();
+
+    // 1.3. Get the mean of DC values
+    int16_t red_dc = red;//movingRedAvg();
+    int16_t ir_dc = ir;//movingIRAvg();
 
     // 2. Send data via UART & SPI
-    uint8_t values[13];
-    values[0] = 0xFE;
-    values[1] = 0;
-    values[2] = 0;
-    values[3] = 13;
-    values[4] = red_ac_filtered >> 8;
-    values[5] = red_ac_filtered;
-    values[6] = red_dc >> 8;
-    values[7] = red_dc;
-    values[8] = ir_ac_filtered >> 8;
-    values[9] = ir_ac_filtered;
-    values[10] = ir_dc >> 8;
-    values[11] = ir_dc;
-    values[12] = 0;
-    for (i = 0; i < 12; i++)
-        values[12] ^= values[i];
+    if (sentCnt++ == 0)
+    {
+        uint8_t values[14];
+        values[0] = 0xFE;
+        values[1] = 0;
+        values[2] = 0;
+        values[3] = 0;
+        values[4] = 8;
+        values[5] = red_ac_filtered >> 8;
+        values[6] = red_ac_filtered;
+        values[7] = red_dc >> 8;
+        values[8] = red_dc;
+        values[9] = ir_ac_filtered >> 8;
+        values[10] = ir_ac_filtered;
+        values[11] = ir_dc >> 8;
+        values[12] = ir_dc;
+        values[13] = 0;
+        for (i = 0; i < 13; i++)
+            values[13] ^= values[i];
 
-    UART_TransmitData(values, 13);
+        UART_TransmitData(values, 14);
+        sentCnt = 0;
+    }
 
     // 3. Find min & max of AC values
-    uint8_t done = findMinMax(red_ac_filtered, ir_ac_filtered);
-    if (done)
-    {
-        // 4. Compute RMS values
-        int16_t red_vpp = (abs(red_max - red_min) + abs(red_max_2 - red_min_2)) / 2;
-        int16_t ir_vpp = (abs(ir_max - ir_min) + abs(ir_max_2 - ir_min_2)) / 2;
-
-        float ir_rms = ir_vpp / 2.828427; // sqrt(8)
-        float red_rms = red_vpp / 2.828427; // sqrt(8)
-
-        // 5. Compute SpO2 & Heartrate
-        int16_t spo2 = (int16_t) computeSpO2(red_dc, red_rms, ir_dc, ir_rms);
-        int16_t heartrate = computeHeartRate();
-
-        // 6. Send data via UART & SPI
-        uint8_t result[9];
-        result[0] = 0xFE;
-        result[1] = 1;
-        result[2] = 0;
-        result[3] = 4;
-        result[4] = spo2 >> 8;
-        result[5] = spo2;
-        result[6] = heartrate >> 8;
-        result[7] = heartrate;
-        result[8] = 0;
-        for (i = 0; i < 8; i++)
-            result[8] ^= result[i];
-
-        UART_TransmitData(result, 9);
-    }
+//    uint8_t done = findMinMax(red_ac_filtered, ir_ac_filtered);
+//    if (done)
+//    {
+//        // 4. Compute RMS values
+//        int16_t red_vpp = (abs(red_max - red_min) + abs(red_max_2 - red_min_2)) / 2;
+//        int16_t ir_vpp = (abs(ir_max - ir_min) + abs(ir_max_2 - ir_min_2)) / 2;
+//
+//        float ir_rms = ir_vpp / 2.828427; // sqrt(8)
+//        float red_rms = red_vpp / 2.828427; // sqrt(8)
+//
+//        // 5. Compute SpO2 & Heartrate
+//        int16_t spo2 = (int16_t) computeSpO2(red_dc, red_rms, ir_dc, ir_rms);
+//        int16_t heartrate = computeHeartRate();
+//
+//        // 6. Send data via UART & SPI
+//        uint8_t result[10];
+//        result[0] = 0xFE;
+//        result[1] = 0;
+//        result[2] = 1;
+//        result[3] = 0;
+//        result[4] = 4;
+//        result[5] = spo2 >> 8;
+//        result[6] = spo2;
+//        result[7] = heartrate >> 8;
+//        result[8] = heartrate;
+//        result[9] = 0;
+//        for (i = 0; i < 9; i++)
+//            result[9] ^= result[i];
+//
+//        UART_TransmitData(result, 10);
+//    }
 }
 
 static float computeSpO2(int16_t red_dc, int16_t red_rms, int16_t ir_dc, int16_t ir_rms)
