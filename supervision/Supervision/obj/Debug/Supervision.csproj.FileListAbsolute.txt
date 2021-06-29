@@ -1,4 +1,3 @@
-C:\Github\fetus_oxygenation_sensor\supervision\Supervision\obj\Debug\Supervision.csproj.AssemblyReference.cache
 C:\Github\fetus_oxygenation_sensor\supervision\Supervision\obj\Debug\Themes\MetroDark\Styles.Core.baml
 C:\Github\fetus_oxygenation_sensor\supervision\Supervision\obj\Debug\Themes\MetroDark\Styles.FrontEnd.baml
 C:\Github\fetus_oxygenation_sensor\supervision\Supervision\obj\Debug\Themes\MetroDark\Styles.Window.baml

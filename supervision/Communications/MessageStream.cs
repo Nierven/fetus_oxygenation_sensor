@@ -341,9 +341,9 @@ namespace Communications
                         Payload = _decodedPayload
                     };
 
-                    if (message.CalculateChecksum() == b)
+                    //if (message.CalculateChecksum() == b)
                         OnDecodedMessage(message);
-                    else Trace.WriteLine("Checksum error.");
+                    //else Trace.WriteLine("Checksum error.");
 
                     _rcvStateNormal = NormalStateReception.CommandMSB;
                     _waiting = true;

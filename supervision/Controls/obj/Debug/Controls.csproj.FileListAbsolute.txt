@@ -1,4 +1,3 @@
-C:\Github\fetus_oxygenation_sensor\supervision\Controls\obj\Debug\Controls.csproj.AssemblyReference.cache
 C:\Github\fetus_oxygenation_sensor\supervision\Controls\obj\Debug\StatusIcon.g.cs
 C:\Github\fetus_oxygenation_sensor\supervision\Controls\obj\Debug\Graph.g.cs
 C:\Github\fetus_oxygenation_sensor\supervision\Controls\obj\Debug\Controls_MarkupCompile.cache
