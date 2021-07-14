@@ -21,6 +21,8 @@ void initGPIO(void)
 
 void initTimers(void)
 {
+    // ----------- TIMER 1 ----------- //
+
     // Timer32 set up in periodic mode, 32-bit, no pre-scale
     TIMER32_1->CONTROL = TIMER32_CONTROL_SIZE |
             TIMER32_CONTROL_MODE;
@@ -31,26 +33,39 @@ void initTimers(void)
     // Enable the Timer32 interrupt in NVIC
     NVIC->ISER[0] = 1 << ((T32_INT1_IRQn) & 31);
 
+    // Stop Timer32 with interrupt enabled
+    TIMER32_1->CONTROL &= ~TIMER32_CONTROL_ENABLE;
+    TIMER32_1->CONTROL |= TIMER32_CONTROL_IE;
+
+    // ----------- TIMER 2 ----------- //
+
+    // Timer32 set up in periodic mode, 32-bit, no pre-scale
+    TIMER32_2->CONTROL = TIMER32_CONTROL_SIZE |
+            TIMER32_CONTROL_MODE;
+
+    // Load Timer32 counter with period = 5ms
+    TIMER32_2->LOAD = 60000;
+
+    // Enable the Timer32 interrupt in NVIC
+    NVIC->ISER[0] = 1 << ((T32_INT2_IRQn) & 31);
+
     // Start Timer32 with interrupt enabled
-    TIMER32_1->CONTROL |= TIMER32_CONTROL_ENABLE |
+    TIMER32_2->CONTROL |= TIMER32_CONTROL_ENABLE |
             TIMER32_CONTROL_IE;
 }
 
 void initADC(void)
 {
     // GPIO Setup
-    P5->SEL1 |= BIT4 | BIT5;                                  // Configure P5.3/2 (A2/3) for ADC
-    P5->SEL0 |= BIT4 | BIT5;                                  // Configure P5.3/2 (A2/3) for ADC
+    P5->SEL1 |= BIT5;                                         // Configure P5.5 (A0) for ADC
+    P5->SEL0 |= BIT5;                                         // Configure P5.5 (A0) for ADC
 
     // Configure ADC14
     ADC14->MCTL[0] = ADC14_MCTLN_INCH_0;                      // ref+=AVcc, channel = A0
-    ADC14->MCTL[1] = ADC14_MCTLN_INCH_1 | ADC14_MCTLN_EOS;    // ref+=AVcc, channel = A1, end seq.
 
     ADC14->CTL0 = ADC14_CTL0_ON |                             // Turn ADC14 on
-                  ADC14_CTL0_MSC |                            // Auto channel increment
-                  ADC14_CTL0_SHT0__8 |                        // 4 cycles for sample & conversion
-                  ADC14_CTL0_SHP |                            // sample & hold mode
-                  ADC14_CTL0_CONSEQ_1;                        // multi-channel, no-repeat
+                  ADC14_CTL0_SHT0__16 |                       // 16 cycles for sample & conversion
+                  ADC14_CTL0_SHP;                             // sample & hold mode
 }
 
 void initUART(void)
@@ -127,7 +142,17 @@ void writeGPIO(LED led, uint8_t on)
     }
 }
 
-void T32_SetDelay(uint32_t delayUs)
+void T1_Start(void)
+{
+    TIMER32_1->CONTROL |= TIMER32_CONTROL_ENABLE;
+}
+
+void T1_Stop(void)
+{
+    TIMER32_1->CONTROL &= ~TIMER32_CONTROL_ENABLE;
+}
+
+void T1_SetDelay(uint32_t delayUs)
 {
     // Load Timer32 counter with period "delayUs" in µs
     TIMER32_1->LOAD = 12 * delayUs; // 12 MHz
@@ -153,8 +178,14 @@ void UART_TransmitData(uint8_t *data, uint16_t length)
 
 void T32_INT1_IRQHandler(void)
 {
-    TIMER32_1->INTCLR |= BIT0;              // Clear Timer32 interrupt flag
     stateMachineLoop();
+    TIMER32_1->INTCLR |= BIT0;              // Clear Timer32 interrupt flag
+}
+
+void T32_INT2_IRQHandler(void)
+{
+    T1_Start();
+    TIMER32_2->INTCLR |= BIT0;              // Clear Timer32 interrupt flag
 }
 
 // UART interrupt service routine

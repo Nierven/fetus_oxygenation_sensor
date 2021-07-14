@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows.Media;
 using SciChart.Charting.Model.DataSeries;
+using SciChart.Charting.Visuals.PointMarkers;
 using SciChart.Charting.Visuals.RenderableSeries;
 
 namespace Controls
@@ -28,6 +29,28 @@ namespace Controls
         public ScrollingViewportManager ViewportManager { get; } = new ScrollingViewportManager();
 
         #endregion
+
+        public void AddPointDataSeries(string name = "Unknown")
+        {
+            // Create new Data series of type X=double, Y=double
+            var series = new XyDataSeries<double, double>
+            {
+                FifoCapacity = 1000,
+                SeriesName = name
+            };
+
+            // Set the data series on the chart's RenderableSeries
+            RenderableSeries.Add(new XyScatterRenderableSeries
+            {
+                DataSeries = series,
+                Stroke = Color.FromRgb(0, 0, 255),
+                AntiAliasing = true,
+                StrokeThickness = 5,
+                PointMarker = new XPointMarker {StrokeThickness = 5}
+            });
+
+            _dataSeries.Add(series);
+        }
 
         public void AddDataSeries(string name = "Unknown", double[] xArray = null, double[] yArray = null)
         {

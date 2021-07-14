@@ -20,7 +20,9 @@ void initUART(void);
 uint8_t readGPIO(LED led);
 void writeGPIO(LED led, uint8_t on);
 
-void T32_SetDelay(uint32_t delayUs);
+void T1_Start(void);
+void T1_Stop(void);
+void T1_SetDelay(uint32_t delayUs);
 void sleep(void);
 
 void UART_TransmitData(uint8_t *data, uint16_t length);

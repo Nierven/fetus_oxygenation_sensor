@@ -12,7 +12,7 @@ int main(void)
     FiltersInit();
 
     // Wait a bit before starting
-    T32_SetDelay(1000);
+    T1_SetDelay(1000);
 
     // Enter sleep mode
     sleep();

@@ -56,7 +56,7 @@ namespace Communications
 
                         // Souscrit à DataReceivedEvent
                         _innerStream.DataReceivedEvent += IStream_DataReceivedEvent;
-                        _waiting = true;
+                        _rcvState = StateReception.Waiting;
 
                         OnPropertyChanged();
                     }).Start();
@@ -73,19 +73,6 @@ namespace Communications
 
         /// <summary>Indique si <see cref="UsedStream"/> est actuellement ouvert ou non.</summary>
         public bool IsOpen => UsedStream?.IsConnected ?? false;
-
-        private bool _usesRobocupCharacterBasedProtocol = false;
-
-        /// <summary>Type de protocole utilisé sur ce flux.</summary>
-        public bool UsesRobocupCharacterBasedProtocol
-        {
-            get => _usesRobocupCharacterBasedProtocol;
-            set
-            {
-                _usesRobocupCharacterBasedProtocol = value;
-                OnPropertyChanged();
-            }
-        }
 
         /// <summary>Instant de réception du dernier message reçu.</summary>
         public DateTime LastReceivedMessageTime { get; private set; }
@@ -117,10 +104,6 @@ namespace Communications
 
         private bool SendMessage(Message message, Action<byte[]> writeDelegate)
         {
-            // Si MessageStream utilise le protocole de la Robocup, on applique automatiquement aux messages à envoyer ce protocole.
-            if (UsesRobocupCharacterBasedProtocol)
-                message.ProtocolUsed = Protocol.CharacterBased;
-
             // On obtient le message sous forme d'array d'octets et on l'envoie
             if (IsOpen)
             {
@@ -170,194 +153,78 @@ namespace Communications
         #endregion
         #region Decoding
 
-        private bool _waiting = true;
-        private Protocol _actualInternalProtocol;
-
         // Données décodées
         private int _decodedCommand;
         private int _decodedPayloadLength;
         private int _decodedPayloadIndex;
         private byte[] _decodedPayload;
 
-        /// <summary>
-        /// Decode l'octet envoyé selon le protocole utilisé.
-        /// </summary>
-        public void DecodeMessage(byte b)
+        private enum StateReception
         {
-            // Si on utilise le protocole de la Robocup, décoder directement le caractère
-            if (UsesRobocupCharacterBasedProtocol)
-            {
-                DecodeCharacterBasedMessage(b);
-            }
-            else if (_waiting)
-            {
-                switch (b)
-                {
-                    case 0xFD:
-                        _actualInternalProtocol = Protocol.Short;
-                        _rcvStateShort = ShortStateReception.CommandMSB;
-                        _waiting = false;
-                        break;
-                    case 0xFE:
-                        _actualInternalProtocol = Protocol.Normal;
-                        _rcvStateNormal = NormalStateReception.CommandMSB;
-                        _waiting = false;
-                        break;
-                }
-            }
-            else
-            {
-                switch (_actualInternalProtocol)
-                {
-                    case Protocol.Short:
-                        DecodeShortMessage(b);
-                        break;
-                    case Protocol.Normal:
-                        DecodeNormalMessage(b);
-                        break;
-                }
-            }
-        }
-
-        #region CharacterBased
-
-        private void DecodeCharacterBasedMessage(byte b)
-        {
-            OnDecodedMessage(new Message
-            {
-                Command = (Commands) b,
-                Payload = null,
-                ProtocolUsed = Protocol.CharacterBased
-            });
-        }
-
-        #endregion
-
-        #region Short
-
-        private enum ShortStateReception
-        {
-            CommandMSB,
-            CommandLSB,
-            Checksum
-        }
-
-        private ShortStateReception _rcvStateShort = ShortStateReception.CommandMSB;
-
-        private void DecodeShortMessage(byte b)
-        {
-            switch (_rcvStateShort)
-            {
-                case ShortStateReception.CommandMSB:
-                    _decodedCommand = b << 8;
-                    _rcvStateShort = ShortStateReception.CommandLSB;
-                    break;
-                case ShortStateReception.CommandLSB:
-                    _decodedCommand += b;
-                    _rcvStateShort = ShortStateReception.Checksum;
-                    break;
-                case ShortStateReception.Checksum:
-                    Message message = new Message((Commands) _decodedCommand);
-
-                    if (message.CalculateChecksum() == b)
-                        OnDecodedMessage(message);
-                    else Trace.WriteLine("Checksum error.");
-
-                    _rcvStateShort = ShortStateReception.CommandMSB;
-                    _waiting = true;
-
-                    break;
-                default:
-                    _rcvStateShort = ShortStateReception.CommandMSB;
-                    _waiting = true;
-
-                    break;
-            }
-        }
-
-        #endregion
-
-        #region Normal
-
-        private enum NormalStateReception
-        {
-            CommandMSB,
-            CommandLSB,
-            PayloadLengthMSB,
-            PayloadLengthLSB,
+            Waiting,
+            Command,
+            PayloadLength,
             Payload,
             Checksum
         }
 
-        private NormalStateReception _rcvStateNormal = NormalStateReception.CommandMSB;
+        private StateReception _rcvState = StateReception.Waiting;
 
-        private void DecodeNormalMessage(byte b)
+        private void DecodeMessage(byte b)
         {
-            switch (_rcvStateNormal)
+            switch (_rcvState)
             {
-                case NormalStateReception.CommandMSB:
-                    _decodedCommand = b << 8;
-                    _rcvStateNormal = NormalStateReception.CommandLSB;
+                case StateReception.Waiting:
+                    if (b == 0xFE)
+                        _rcvState = StateReception.Command;
                     break;
-                case NormalStateReception.CommandLSB:
-                    _decodedCommand += b;
-                    _rcvStateNormal = NormalStateReception.PayloadLengthMSB;
+                case StateReception.Command:
+                    _decodedCommand = b;
+                    _rcvState = StateReception.PayloadLength;
                     break;
-                case NormalStateReception.PayloadLengthMSB:
-                    _decodedPayloadLength = b << 8;
-                    _rcvStateNormal = NormalStateReception.PayloadLengthLSB;
-                    break;
-                case NormalStateReception.PayloadLengthLSB:
-                    _decodedPayloadLength += b;
+                case StateReception.PayloadLength:
+                    _decodedPayloadLength = b;
 
                     if (_decodedPayloadLength == 0)
                     {
-                        _rcvStateNormal = NormalStateReception.CommandMSB;
-                        _waiting = true;
+                        _rcvState = StateReception.Waiting;
                         break;
                     }
                     else if (_decodedPayloadLength >= MaximumPayloadLength)
                     {
-                        _rcvStateNormal = NormalStateReception.CommandMSB;
-                        _waiting = true;
+                        _rcvState = StateReception.Command;
                         break;
                     }
 
                     _decodedPayload = new byte[_decodedPayloadLength];
                     _decodedPayloadIndex = 0;
-                    _rcvStateNormal = NormalStateReception.Payload;
+                    _rcvState = StateReception.Payload;
 
                     break;
-                case NormalStateReception.Payload:
+                case StateReception.Payload:
                     _decodedPayload[_decodedPayloadIndex++] = b;
                     if (_decodedPayloadIndex >= _decodedPayloadLength)
-                        _rcvStateNormal = NormalStateReception.Checksum;
+                        _rcvState = StateReception.Checksum;
 
                     break;
-                case NormalStateReception.Checksum:
+                case StateReception.Checksum:
                     Message message = new Message
                     {
                         Command = (Commands) _decodedCommand,
                         Payload = _decodedPayload
                     };
 
-                    //if (message.CalculateChecksum() == b)
+                    if (message.CalculateChecksum() == b)
                         OnDecodedMessage(message);
-                    //else Trace.WriteLine("Checksum error.");
+                    else Trace.WriteLine("Checksum error.");
 
-                    _rcvStateNormal = NormalStateReception.CommandMSB;
-                    _waiting = true;
-
+                    _rcvState = StateReception.Waiting;
                     break;
                 default:
-                    _rcvStateNormal = NormalStateReception.CommandMSB;
-                    _waiting = true;
-
+                    _rcvState = StateReception.Waiting;
                     break;
             }
         }
-
-        #endregion
 
         #endregion
 

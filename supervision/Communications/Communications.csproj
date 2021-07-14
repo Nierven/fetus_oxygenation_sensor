@@ -48,13 +48,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\Annotations.cs" />
-    <Compile Include="UDPServer.cs" />
-    <Compile Include="UDPClient.cs" />
-    <Compile Include="TCPClient.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Informations.cs" />
     <Compile Include="IStream.cs" />
-    <Compile Include="TCPServer.cs" />
     <Compile Include="MessageStream.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
