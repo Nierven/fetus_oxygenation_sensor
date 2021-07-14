@@ -1,0 +1,66 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    mc:Ignorable="d">
+
+    <!--Base Colors-->
+    <Color x:Key="Transparent">#00000000</Color>
+    <Color x:Key="Black">#FF282828</Color>
+    <Color x:Key="White">#FFFFFFFF</Color>
+    <Color x:Key="SemiWhite">#FFCDCDCD</Color>
+    <Color x:Key="Gray_00">#FFBABABA</Color>
+    <Color x:Key="Gray_01">#FF858585</Color>
+    <Color x:Key="Gray_02">#FF747474</Color>
+    <Color x:Key="Gray_03">#FF565656</Color>
+    <Color x:Key="Gray_04">#FF454545</Color>
+    <Color x:Key="Gray_05">#FF333333</Color>
+    <Color x:Key="Gray_06">#FF292929</Color>
+    <Color x:Key="Gray_07">#FF181818</Color>
+    <Color x:Key="Gray_Transparent_00">#66E2E2E2</Color>
+    <Color x:Key="Gray_Transparent_01">#33565656</Color>
+
+    <!--Transparent and Whites with transparency-->
+
+    <!--90% White-->
+    <Color x:Key="White_90">#E5FFFFFF</Color>
+    <!--75% White-->
+    <Color x:Key="White_75">#BFFFFFFF</Color>
+    <!--60% White-->
+    <Color x:Key="White_60">#99FFFFFF</Color>
+    <!--45% White-->
+    <Color x:Key="White_45">#72FFFFFF</Color>
+    <!--30% White-->
+    <Color x:Key="White_30">#4CFFFFFF</Color>
+    <!--15% White-->
+    <Color x:Key="White_15">#26FFFFFF</Color>
+    <!--0% White-->
+    <Color x:Key="White_0">#00FFFFFF</Color>
+
+    <!--Blacks and grays with transparency-->
+
+    <!--90% Black-->
+    <Color x:Key="Black_90">#E5000000</Color>
+    <!--75% Black-->
+    <Color x:Key="Black_75">#BF000000</Color>
+    <!--60% Black-->
+    <Color x:Key="Black_60">#99000000</Color>
+    <!--45% Black-->
+    <Color x:Key="Black_45">#72000000</Color>
+    <!--30% Black-->
+    <Color x:Key="Black_30">#4C000000</Color>
+    <!--15% Black-->
+    <Color x:Key="Black_15">#26000000</Color>
+    <!--0% Black-->
+    <Color x:Key="Black_0">#00000000</Color>
+
+    <!--Theme Accent colors -->
+    <Color x:Key="DarkAccentColor">#FF0086AF</Color>
+    <Color x:Key="AccentColor">#FF00AADE</Color>
+    <Color x:Key="LightAccentColor">#FF80D5EF</Color>
+
+    <!--Theme Error colors -->
+    <Color x:Key="ErrorColor">#FFD0284C</Color>
+    <Color x:Key="LightErrorColor">#FFF55E7F</Color>
+
+</ResourceDictionary>

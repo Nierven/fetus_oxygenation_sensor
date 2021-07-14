@@ -1,0 +1,18 @@
+﻿<Application x:Class="Supervision.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Supervision"
+             StartupUri="SupervisionWindow.xaml"
+             Exit="App_OnExit">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/MetroDark/Styles.Window.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- Style setters so that every window follow the dark style -->
+            <Style BasedOn="{StaticResource {x:Type Window}}" TargetType="{x:Type local:SupervisionWindow}"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
