@@ -1,15 +1,6 @@
 ﻿using Communications;
-
 using Controls;
-
 using System;
-using System.Collections.Generic;
-using System.Windows;
-using System.Windows.Documents;
-using System.Windows.Media;
-using SciChart.Charting.Model.DataSeries;
-using SciChart.Charting.Visuals.PointMarkers;
-using SciChart.Charting.Visuals.RenderableSeries;
 
 namespace Supervision
 {
@@ -91,7 +82,7 @@ namespace Supervision
         private readonly DateTime _t0 = DateTime.Now;
         private double T => (DateTime.Now - _t0).TotalSeconds;
 
-        public MessageStream Stream { get; } = new MessageStream(new AdvancedSerialPort("COM7", 115200));
+        public MessageStream Stream { get; } = new MessageStream(new AdvancedSerialPort("COM4", 115200));
 
         public GraphModelView Model { get; } = new GraphModelView();
     }
